@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Cloud.PuzzleGame", "EM.Cloud.PuzzleGame\EM.Cloud.PuzzleGame.csproj", "{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Cloud.PuzzleGame.Tests", "EM.Cloud.PuzzleGame.Tests\EM.Cloud.PuzzleGame.Tests.csproj", "{58BEC0F4-1A7F-4951-93A0-3D7DBD18806C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Cloud.PuzzleGame.Model", "EM.Cloud.PuzzleGame.Model\EM.Cloud.PuzzleGame.Model.csproj", "{6589AEF0-DD9D-49BA-B979-79885E7C78B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BEC0F4-1A7F-4951-93A0-3D7DBD18806C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BEC0F4-1A7F-4951-93A0-3D7DBD18806C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BEC0F4-1A7F-4951-93A0-3D7DBD18806C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BEC0F4-1A7F-4951-93A0-3D7DBD18806C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6589AEF0-DD9D-49BA-B979-79885E7C78B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6589AEF0-DD9D-49BA-B979-79885E7C78B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6589AEF0-DD9D-49BA-B979-79885E7C78B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6589AEF0-DD9D-49BA-B979-79885E7C78B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
