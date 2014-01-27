@@ -1,4 +1,7 @@
-﻿//TODO: Inject dependencies
+﻿
+
+
+//TODO: Inject dependencies
 define(['plugins/router', 'durandal/app'],
     function (router, app) {
         // Internal properties and functions
@@ -7,6 +10,8 @@ define(['plugins/router', 'durandal/app'],
         // Reveal the bindable properties and functions
         var vm = {
             activate: activate,
+            attached: attached,
+            compositionComplete: compositionComplete,
             canDeactivate: canDeactivate,
             goBack: goBack,
             title: 'Play Game'
@@ -14,8 +19,16 @@ define(['plugins/router', 'durandal/app'],
 
         return vm;
         
-        function activate(id, querystring)
+        function attached()
         {
+            //var x = "goo";
+
+            //$(document).ready(function () {
+            //    var canvas1 = document.getElementById('testDiv1');
+            //    var appHost = $('#applicationHost.page-host.durandal-wrapper#testDiv1')[0];
+            //    var c = $("canvas:first")[0];
+
+            //});
 
             caat = new CAAT.ImagePreloader().loadImages(
             [
@@ -24,7 +37,9 @@ define(['plugins/router', 'durandal/app'],
             function (counter, images) {
                 if (counter === images.length) {
 
-                    var director = new CAAT.Director().initialize(800, 600);
+                    var canvas1 = document.getElementById('puzzleCanvas');
+                    var canvas = $('#puzzleCanvas')[0];
+                    var director = new CAAT.Director().initialize(800, 600, canvas);
                     director.enableResizeEvents(CAAT.Director.prototype.RESIZE_PROPORTIONAL);
                     director.setImagesCache(images);
                     director.addAudio("11", "11.mp3").addAudio("12", "12.mp3").addAudio("win", "win.mp3");
@@ -42,6 +57,26 @@ define(['plugins/router', 'durandal/app'],
                     CAAT.loop(60)
                 }
             });
+        }
+
+        function compositionComplete()
+        {
+            //var x = "goo";
+
+            //$(document).ready(function () {
+            //    var canvas1 = document.getElementById('testDiv1');
+            //    var appHost = $('#applicationHost.page-host.durandal-wrapper#testDiv1')[0];
+            //    var c = $("canvas:first")[0];
+
+            //});
+        }
+
+        function activate(id, querystring)
+        {
+            
+            
+
+            
         }
 
         function canDeactivate() {
