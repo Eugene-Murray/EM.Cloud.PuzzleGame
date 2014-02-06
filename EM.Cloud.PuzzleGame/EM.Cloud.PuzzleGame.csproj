@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,19 +7,21 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7D6365A6-EF83-4F6F-87EB-CF7178125BD5}</ProjectGuid>
-    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{87F56860-2C8D-4E4C-A15E-1EEAED082234}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EM.Cloud.PuzzleGame</RootNamespace>
     <AssemblyName>EM.Cloud.PuzzleGame</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,424 +41,360 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Breeze.ContextProvider">
-      <HintPath>..\packages\Breeze.Server.ContextProvider.1.4.8\lib\Breeze.ContextProvider.dll</HintPath>
+    <Reference Include="Breeze.WebApi">
+      <HintPath>..\packages\Breeze.WebApi.1.3.5\lib\Breeze.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Breeze.ContextProvider.EF6">
-      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.4.8\lib\Breeze.ContextProvider.EF6.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Breeze.WebApi2">
-      <HintPath>..\packages\Breeze.Server.WebApi2.1.4.8\lib\Breeze.WebApi2.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="Irony">
+      <HintPath>..\packages\Breeze.WebApi.1.3.5\lib\Irony.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
     </Reference>
-    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.4.3.6\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.OData">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.0.0\lib\net45\System.Web.Http.OData.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest">
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Providers">
-      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="WebActivator">
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
     </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\DurandalBundleConfig.cs" />
-    <Compile Include="App_Start\DurandalConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DurandalController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App\eventAggregator\index.html" />
-    <Content Include="App\eventAggregator\index.js" />
-    <Content Include="App\eventAggregator\publisher.html" />
-    <Content Include="App\eventAggregator\publisher.js" />
-    <Content Include="App\eventAggregator\subscriber.html" />
-    <Content Include="App\eventAggregator\subscriber.js" />
-    <Content Include="App\ko\animatedTrans\index.html" />
-    <Content Include="App\ko\animatedTrans\index.js" />
-    <Content Include="App\ko\betterList\index.html" />
-    <Content Include="App\ko\betterList\index.js" />
-    <Content Include="App\ko\clickCounter\index.html" />
-    <Content Include="App\ko\clickCounter\index.js" />
-    <Content Include="App\ko\collections\index.html" />
-    <Content Include="App\ko\collections\index.js" />
-    <Content Include="App\ko\contactsEditor\index.html" />
-    <Content Include="App\ko\contactsEditor\index.js" />
-    <Content Include="App\ko\controlTypes\index.html" />
-    <Content Include="App\ko\controlTypes\index.js" />
-    <Content Include="App\ko\gridEditor\index.html" />
-    <Content Include="App\ko\gridEditor\index.js" />
-    <Content Include="App\ko\helloWorld\index.html" />
-    <Content Include="App\ko\helloWorld\index.js" />
-    <Content Include="App\ko\index.html" />
-    <Content Include="App\ko\index.js" />
-    <Content Include="App\ko\pagedGrid\index.html" />
-    <Content Include="App\ko\pagedGrid\index.js" />
-    <Content Include="App\ko\pagedGrid\simpleGrid.html" />
-    <Content Include="App\ko\pagedGrid\simpleGrid.js" />
-    <Content Include="App\ko\shoppingCart\index.html" />
-    <Content Include="App\ko\shoppingCart\index.js" />
-    <Content Include="App\ko\shoppingCart\sampleProductCategories.js" />
-    <Content Include="App\ko\simpleList\index.html" />
-    <Content Include="App\ko\simpleList\index.js" />
-    <Content Include="App\ko\twitterClient\index.html" />
-    <Content Include="App\ko\twitterClient\index.js" />
-    <Content Include="App\main.js" />
-    <Content Include="App\masterDetail\index.html" />
-    <Content Include="App\masterDetail\index.js" />
-    <Content Include="App\masterDetail\project.html" />
-    <Content Include="App\masterDetail\project.js" />
-    <Content Include="App\modal\customModal.html" />
-    <Content Include="App\modal\customModal.js" />
-    <Content Include="App\modal\index.html" />
-    <Content Include="App\modal\index.js" />
-    <Content Include="App\services\data.js" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea1.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea1.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea1.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea1.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea10.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea10.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea10.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea10.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea11.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea11.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea11.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea11.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea2.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea2.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea2.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea2.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea3.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea3.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea3.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea3.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea4.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea4.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea4.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea4.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea5.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea5.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea5.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea5.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea6.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea6.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea6.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea6.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea7.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea7.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea7.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea7.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea8.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea8.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea8.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea8.4.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea9.1.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea9.2.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea9.3.jpg" />
-    <Content Include="Content\gameImages\CrimeaUkraine\Crimea9.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.1.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.1.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.1.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.1.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.2.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.2.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.2.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.2.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.3.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.3.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.3.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.3.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.4.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.4.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.4.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.4.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.5.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.5.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.5.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.5.4.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.6.1.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.6.2.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.6.3.jpg" />
-    <Content Include="Content\gameImages\FrenchAlps\alps.6.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.1.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.1.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.1.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.1.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.10.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.10.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.10.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.10.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.2.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.2.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.2.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.2.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.3.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.3.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.3.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.3.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.4.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.4.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.4.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.4.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.5.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.5.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.5.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.5.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.6.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.6.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.6.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.6.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.7.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.7.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.7.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.7.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.8.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.8.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.8.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.8.4.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.9.1.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.9.2.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.9.3.jpg" />
-    <Content Include="Content\gameImages\Mauritius\mauritius.9.4.jpg" />
-    <Content Include="Scripts\gameEngines\puzzle.js" />
-    <Content Include="App\viewComposition\index.html" />
-    <Content Include="App\viewComposition\index.js" />
-    <Content Include="App\viewComposition\inlineModule.js" />
-    <Content Include="App\viewmodels\allPics.js" />
-    <Content Include="App\viewmodels\flickr.js" />
-    <Content Include="App\viewmodels\holidaySuggestions.js" />
-    <Content Include="App\viewmodels\interestingFacts.js" />
-    <Content Include="App\viewmodels\playGame.js" />
-    <Content Include="App\viewmodels\result.js" />
-    <Content Include="App\viewmodels\selectPic.js" />
-    <Content Include="App\viewmodels\selectRegion.js" />
-    <Content Include="App\shell.js" />
-    <Content Include="App\viewmodels\signUp.js" />
-    <Content Include="App\viewmodels\welcome.js" />
-    <Content Include="App\views\selectRegion.html" />
-    <Content Include="App\views\selectPic.html" />
-    <Content Include="App\views\result.html" />
-    <Content Include="App\views\playGame.html" />
-    <Content Include="App\views\interestingFacts.html" />
-    <Content Include="App\views\detail.html" />
-    <Content Include="App\views\flickr.html" />
-    <Content Include="App\shell.html" />
-    <Content Include="App\views\allPics.html" />
-    <Content Include="App\views\holidaySuggestions.html" />
-    <Content Include="App\views\signUp.html" />
-    <Content Include="App\views\welcome.html" />
-    <Content Include="App\widgets\expander\view.html" />
-    <Content Include="App\widgets\expander\viewmodel.js" />
-    <Content Include="App\widgets\index.html" />
-    <Content Include="App\widgets\index.js" />
-    <Content Include="App\widgets\project.html" />
-    <Content Include="App\widgets\project.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\durandal.css" />
-    <Content Include="Content\font-awesome.css" />
-    <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\gameImages\USA\USA.1.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.1.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.1.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.2.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.2.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.2.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.3.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.3.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.3.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.4.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.4.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.5.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.5.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.5.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.6.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.6.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.6.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.7.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.7.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.7.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.8.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.8.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.8.3.jpg" />
-    <Content Include="Content\gameImages\USA\USA.9.1.jpg" />
-    <Content Include="Content\gameImages\USA\USA.9.2.jpg" />
-    <Content Include="Content\gameImages\USA\USA.9.3.jpg" />
-    <Content Include="Content\ie10mobile.css" />
-    <Content Include="Content\images\icon.png" />
-    <Content Include="Content\images\ios-startup-image-landscape.png" />
-    <Content Include="Content\images\ios-startup-image-portrait.png" />
-    <Content Include="Content\starterkit.css" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery-ui.css" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="app\mybootstrap\index.html" />
+    <Content Include="app\mybootstrap\index.js" />
+    <Content Include="app\goo\index.html" />
+    <Content Include="app\goo\index.js" />
+    <Content Include="app\eventAggregator\index.html" />
+    <Content Include="app\eventAggregator\index.js" />
+    <Content Include="app\eventAggregator\publisher.html" />
+    <Content Include="app\eventAggregator\publisher.js" />
+    <Content Include="app\eventAggregator\subscriber.html" />
+    <Content Include="app\eventAggregator\subscriber.js" />
+    <Content Include="app\hello\index.html" />
+    <Content Include="app\hello\index.js" />
+    <Content Include="app\ko\animatedTrans\index.html" />
+    <Content Include="app\ko\animatedTrans\index.js" />
+    <Content Include="app\ko\betterList\index.html" />
+    <Content Include="app\ko\betterList\index.js" />
+    <Content Include="app\ko\clickCounter\index.html" />
+    <Content Include="app\ko\clickCounter\index.js" />
+    <Content Include="app\ko\collections\index.html" />
+    <Content Include="app\ko\collections\index.js" />
+    <Content Include="app\ko\contactsEditor\index.html" />
+    <Content Include="app\ko\contactsEditor\index.js" />
+    <Content Include="app\ko\controlTypes\index.html" />
+    <Content Include="app\ko\controlTypes\index.js" />
+    <Content Include="app\ko\gridEditor\index.html" />
+    <Content Include="app\ko\gridEditor\index.js" />
+    <Content Include="app\ko\helloWorld\index.html" />
+    <Content Include="app\ko\helloWorld\index.js" />
+    <Content Include="app\ko\index.html" />
+    <Content Include="app\ko\index.js" />
+    <Content Include="app\ko\pagedGrid\index.html" />
+    <Content Include="app\ko\pagedGrid\index.js" />
+    <Content Include="app\ko\pagedGrid\simpleGrid.html" />
+    <Content Include="app\ko\pagedGrid\simpleGrid.js" />
+    <Content Include="app\ko\shoppingCart\index.html" />
+    <Content Include="app\ko\shoppingCart\index.js" />
+    <Content Include="app\ko\shoppingCart\sampleProductCategories.js" />
+    <Content Include="app\ko\simpleList\index.html" />
+    <Content Include="app\ko\simpleList\index.js" />
+    <Content Include="app\ko\twitterClient\index.html" />
+    <Content Include="app\ko\twitterClient\index.js" />
+    <Content Include="app\main.js" />
+    <Content Include="app\masterDetail\index.html" />
+    <Content Include="app\masterDetail\index.js" />
+    <Content Include="app\masterDetail\project.html" />
+    <Content Include="app\masterDetail\project.js" />
+    <Content Include="app\modal\customModal.html" />
+    <Content Include="app\modal\customModal.js" />
+    <Content Include="app\modal\index.html" />
+    <Content Include="app\modal\index.js" />
+    <Content Include="app\shell.html" />
+    <Content Include="app\shell.js" />
+    <Content Include="app\viewComposition\index.html" />
+    <Content Include="app\viewComposition\index.js" />
+    <Content Include="app\viewComposition\inlineModule.js" />
+    <Content Include="app\views\childView1.html" />
+    <Content Include="app\views\childView2.html" />
+    <Content Include="app\widgets\expander\view.html" />
+    <Content Include="app\widgets\expander\viewmodel.js" />
+    <Content Include="app\widgets\index.html" />
+    <Content Include="app\widgets\index.js" />
+    <Content Include="app\widgets\project.html" />
+    <Content Include="app\widgets\project.js" />
+    <Content Include="assets\arrowleft.png" />
+    <Content Include="assets\arrowright.png" />
+    <Content Include="assets\arrow_large_left.png" />
+    <Content Include="assets\arrow_large_right.png" />
+    <Content Include="assets\arrow_left.png" />
+    <Content Include="assets\arrow_left2.png" />
+    <Content Include="assets\arrow_right.png" />
+    <Content Include="assets\arrow_right2.png" />
+    <Content Include="assets\black50.png" />
+    <Content Include="assets\boxed_bgtile.png" />
+    <Content Include="assets\bullet.png" />
+    <Content Include="assets\bullets.png" />
+    <Content Include="assets\bullets2.png" />
+    <Content Include="assets\bullet_boxed.png" />
+    <Content Include="assets\coloredbg.png" />
+    <Content Include="assets\grain.png" />
+    <Content Include="assets\large_left.png" />
+    <Content Include="assets\large_right.png" />
+    <Content Include="assets\loader.gif" />
+    <Content Include="assets\loader2.gif" />
+    <Content Include="assets\navigdots.png" />
+    <Content Include="assets\navigdots_bgtile.png" />
+    <Content Include="assets\shadow1.png" />
+    <Content Include="assets\shadow2.png" />
+    <Content Include="assets\shadow3.png" />
+    <Content Include="assets\small_left.png" />
+    <Content Include="assets\small_left_boxed.png" />
+    <Content Include="assets\small_right.png" />
+    <Content Include="assets\small_right_boxed.png" />
+    <Content Include="assets\timer.png" />
+    <Content Include="assets\timerdot.png" />
+    <Content Include="assets\transparent.jpg" />
+    <Content Include="assets\white50.png" />
+    <Content Include="content\durandal.css" />
+    <Content Include="content\images\icon.png" />
+    <Content Include="content\images\ios-startup-image-landscape.png" />
+    <Content Include="content\images\ios-startup-image-portrait.png" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\font-awesome.min.css" />
+    <Content Include="content\ie-style.css" />
+    <Content Include="content\ie10mobile.css" />
+    <Content Include="content\prettyPhoto.css" />
+    <Content Include="content\samples.css" />
+    <Content Include="content\settings-ie8.css" />
+    <Content Include="content\settings.css" />
+    <Content Include="content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="content\images\3.png" />
+    <Content Include="content\images\4.png" />
+    <Content Include="content\images\5.png" />
+    <Content Include="content\images\6.png" />
+    <Content Include="content\images\blog1.jpg" />
+    <Content Include="content\images\blog2.jpg" />
+    <Content Include="content\images\img01.jpg" />
+    <Content Include="content\images\img02.jpg" />
+    <Content Include="content\images\img03.jpg" />
+    <Content Include="content\images\img04.jpg" />
+    <Content Include="content\images\portfolio\1.jpg" />
+    <Content Include="content\images\portfolio\2.jpg" />
+    <Content Include="content\images\portfolio\3.jpg" />
+    <Content Include="content\images\portfolio\4.jpg" />
+    <Content Include="content\images\portfolio\5.jpg" />
+    <Content Include="content\images\portfolio\6.jpg" />
+    <Content Include="content\images\portfolio\7.jpg" />
+    <Content Include="content\images\portfolio\8.jpg" />
+    <Content Include="content\images\portfolio\9.jpg" />
+    <Content Include="content\images\portfolio\tn1.jpg" />
+    <Content Include="content\images\portfolio\tn2.jpg" />
+    <Content Include="content\images\portfolio\tn3.jpg" />
+    <Content Include="content\images\portfolio\tn4.jpg" />
+    <Content Include="content\images\portfolio\tn5.jpg" />
+    <Content Include="content\images\portfolio\tn6.jpg" />
+    <Content Include="content\images\portfolio\tn7.jpg" />
+    <Content Include="content\images\portfolio\tn8.jpg" />
+    <Content Include="content\images\portfolio\tn9.jpg" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="content\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="content\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="content\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="content\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="content\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="content\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="content\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="content\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="content\images\prettyPhoto\default\loader.gif" />
+    <Content Include="content\images\prettyPhoto\default\sprite.png" />
+    <Content Include="content\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="content\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="content\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="content\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="content\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="content\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="content\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="content\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="content\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="content\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="content\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="content\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="content\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="content\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="content\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="content\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="content\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="content\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="content\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="content\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="content\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="content\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="content\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="content\images\pro1.jpg" />
+    <Content Include="content\images\pro2.jpg" />
+    <Content Include="content\images\pro3.jpg" />
+    <Content Include="content\images\slider\beach-84533_1920.jpg" />
+    <Content Include="content\images\slider\bird1.png" />
+    <Content Include="content\images\slider\bird2.png" />
+    <Content Include="content\images\slider\cloud1.png" />
+    <Content Include="content\images\slider\cloud2.png" />
+    <Content Include="content\images\slider\cloud3.png" />
+    <Content Include="content\images\slider\s1.jpg" />
+    <Content Include="content\images\slider\s2.jpg" />
+    <Content Include="content\images\slider\s3.jpg" />
+    <Content Include="content\images\slider\s31.png" />
+    <Content Include="content\images\slider\s32.png" />
+    <Content Include="content\images\slider\s33.png" />
+    <Content Include="content\images\team-back.jpg" />
+    <Content Include="content\images\team-user1.jpg" />
+    <Content Include="content\images\team-user2.jpg" />
+    <Content Include="content\images\team-user3.jpg" />
+    <Content Include="content\images\transparent.png" />
+    <Content Include="content\images\user-sm.jpg" />
+    <Content Include="content\images\w1.png" />
+    <Content Include="content\images\weather.jpg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="index.html" />
+    <Content Include="index_Durandal.html" />
+    <Content Include="Index_Breeze.html" />
+    <Content Include="content\reset.css" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\todo.css" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\excanvas.min.js" />
+    <Content Include="Scripts\filter.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\isotope.js" />
+    <Content Include="Scripts\jquery.flot.min.js" />
+    <Content Include="Scripts\jquery.flot.resize.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.sparkline.min.js" />
+    <Content Include="Scripts\jquery.themepunch.plugins.min.js" />
+    <Content Include="Scripts\jquery.themepunch.revolution.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\durandal\css\durandal.css" />
+    <Content Include="lib\durandal\img\icon.png" />
+    <Content Include="lib\durandal\img\ios-startup-image-landscape.png" />
+    <Content Include="lib\durandal\img\ios-startup-image-portrait.png" />
+    <Content Include="lib\durandal\js\activator.js" />
+    <Content Include="lib\durandal\js\app.js" />
+    <Content Include="lib\durandal\js\binder.js" />
+    <Content Include="lib\durandal\js\composition.js" />
+    <Content Include="lib\durandal\js\events.js" />
+    <Content Include="lib\durandal\js\plugins\dialog.js" />
+    <Content Include="lib\durandal\js\plugins\history.js" />
+    <Content Include="lib\durandal\js\plugins\http.js" />
+    <Content Include="lib\durandal\js\plugins\observable.js" />
+    <Content Include="lib\durandal\js\plugins\router.js" />
+    <Content Include="lib\durandal\js\plugins\serializer.js" />
+    <Content Include="lib\durandal\js\plugins\widget.js" />
+    <Content Include="lib\durandal\js\system.js" />
+    <Content Include="lib\durandal\js\transitions\entrance.js" />
+    <Content Include="lib\durandal\js\viewEngine.js" />
+    <Content Include="lib\durandal\js\viewLocator.js" />
+    <Content Include="lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="lib\font-awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="assets\arrows.psd" />
+    <Content Include="assets\bullets.psd" />
+    <Content Include="assets\small_arrows.psd" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
+    <None Include="lib\jquery\jquery-1.9.1.intellisense.js" />
+    <Content Include="lib\jquery\jquery-1.9.1.js" />
+    <Content Include="lib\jquery\jquery-1.9.1.min.js" />
+    <Content Include="lib\knockout\knockout-2.3.0.debug.js" />
+    <Content Include="lib\knockout\knockout-2.3.0.js" />
+    <Content Include="lib\require\almond-custom.js" />
+    <Content Include="lib\require\r.js" />
+    <Content Include="lib\require\require.js" />
+    <Content Include="lib\require\text.js" />
     <Content Include="Scripts\almond-custom.js" />
-    <Content Include="Scripts\gameEngines\caat.js" />
+    <Content Include="app\mybreeze\dataservice.js" />
+    <Content Include="app\logger.js" />
+    <Content Include="app\mybreeze\main_old.js" />
+    <Content Include="app\mybreeze\index.html" />
+    <Content Include="app\mybreeze\index.js" />
     <Content Include="Scripts\durandal\activator.js" />
     <Content Include="Scripts\durandal\app.js" />
     <Content Include="Scripts\durandal\binder.js" />
@@ -470,60 +408,61 @@
     <Content Include="Scripts\durandal\plugins\serializer.js" />
     <Content Include="Scripts\durandal\plugins\widget.js" />
     <Content Include="Scripts\durandal\system.js" />
-    <Content Include="Scripts\durandal\transitions\entrance.js" />
     <Content Include="Scripts\durandal\viewEngine.js" />
     <Content Include="Scripts\durandal\viewLocator.js" />
+    <Content Include="app\toastr.js" />
     <Content Include="weyland-config.js" />
-    <Content Include="readme.md" />
-    <Content Include="App\viewComposition\inlineModule" />
-    <Content Include="App\widgets\Readme.md" />
+    <Content Include="app\viewComposition\inlineModule" />
+    <Content Include="app\widgets\Readme.md" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\font\FontAwesome.otf" />
+    <Content Include="lib\jquery\jquery-1.9.1.min.map" />
     <None Include="Scripts\breeze.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\breeze.savequeuing.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\q.js" />
     <Content Include="Scripts\q.min.js" />
     <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.debug.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\text.js" />
+    <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Durandal\Index.cshtml" />
-    <Content Include="Views\Durandal\_splash.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Compile Include="App_Start\BreezeSimpleCorsHandler.cs" />
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="Controllers\PuzzleGameController.cs" />
+    <Compile Include="Models\PuzzleGameDatabaseInitializer.cs" />
+    <Compile Include="Models\PuzzleGameItem.cs" />
+    <Compile Include="Models\PuzzleGameContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\app\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -532,18 +471,15 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
-    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
-  </Target>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49489</DevelopmentServerPort>
+          <DevelopmentServerPort>59880</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49489/</IISUrl>
+          <IISUrl>http://localhost:61882/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -553,10 +489,34 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+      xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+      if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+      xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+      IF EXIST "$(ProjectDir)..\..\..\Breeze.Client\Scripts\breeze.debug.js" GOTO breezeExists
+      echo Source breeze.debug.js was not found in '$(ProjectDir)..\..\..\Breeze.Client\Scripts\' and was not copied
+      GOTO :done
+      :breezeExists
+      echo Copying breeze.*.js from '$(ProjectDir)..\..\..\Breeze.Client\Scripts\' to Scripts\
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\Scripts\breeze.min.js" "$(ProjectDir)Scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\Scripts\breeze.debug.js" "$(ProjectDir)Scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\Scripts\breeze.intellisense.js" "$(ProjectDir)Scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\Scripts\Experimental\breeze.savequeuing.js" "$(ProjectDir)Scripts" /Y      
+      :done
+</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-  </Target> -->
+  </Target>
+  -->
 </Project>

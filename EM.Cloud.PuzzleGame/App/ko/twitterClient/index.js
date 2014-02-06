@@ -58,7 +58,7 @@
 
     var userNameToAdd = ko.observable("");
 
-    var currentTweets = ko.observableArray([])
+	var currentTweets = ko.observableArray([]);
 
     var findSavedList = function (name) {
         var lists = savedLists();
@@ -95,7 +95,7 @@
     var deleteList = function () {
         var nameToDelete = editingList.name();
         var savedListsExceptOneToDelete = $.grep(savedLists(), function (list) {
-            return list.name != nameToDelete
+	        return list.name != nameToDelete;
         });
         editingList.name(savedListsExceptOneToDelete.length == 0 ? null : savedListsExceptOneToDelete[0].name);
         savedLists(savedListsExceptOneToDelete);
@@ -134,18 +134,18 @@
         }
     });
 
-    return {
-        savedLists : savedLists,
-        editingList : editingList,
-        userNameToAdd : userNameToAdd,
-        currentTweets : currentTweets,
-        findSavedList : findSavedList,
-        addUser : addUser,
-        removeUser : removeUser,
-        saveChanges : saveChanges,
-        deleteList : deleteList,
-        hasUnsavedChanges : hasUnsavedChanges,
-        userNameToAddIsValid : userNameToAddIsValid,
-        canAddUserName: canAddUserName
-    }
+	return {
+		savedLists: savedLists,
+		editingList: editingList,
+		userNameToAdd: userNameToAdd,
+		currentTweets: currentTweets,
+		findSavedList: findSavedList,
+		addUser: addUser,
+		removeUser: removeUser,
+		saveChanges: saveChanges,
+		deleteList: deleteList,
+		hasUnsavedChanges: hasUnsavedChanges,
+		userNameToAddIsValid: userNameToAddIsValid,
+		canAddUserName: canAddUserName
+	};
 });

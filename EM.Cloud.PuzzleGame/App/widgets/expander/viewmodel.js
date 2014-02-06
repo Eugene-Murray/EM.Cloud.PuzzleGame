@@ -20,7 +20,7 @@
         $itemContainer.hide();
 
         $(parts.headerContainer).bind('click', function() {
-            $itemContainer.toggle('fast');
+            $itemContainer.toggle('slow');
         });
     };
 

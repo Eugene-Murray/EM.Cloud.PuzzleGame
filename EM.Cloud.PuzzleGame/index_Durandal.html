@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+		<title>Puzzle Cloud</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="ResponsiveWebInc">
+		
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-landscape.png" media="(orientation:landscape)" />
+        <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-portrait.png" media="(orientation:portrait)" />
+        <link rel="apple-touch-icon" href="lib/durandal/img/icon.png"/>
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+		
+        
+
+		<!-- Styles -->
+        
+        <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css" />
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="content/ie10mobile.css" />-->
+        
+        
+        <!--<link rel="stylesheet" href="Content/reset.css"/>-->
+        <!--  <link rel="stylesheet" href="Content/toastr.css"/>-->
+        <!--<link rel="stylesheet" href="Content/todo.css"/>-->
+
+		<!-- Bootstrap CSS -->
+		<link href="content/bootstrap.min.css" rel="stylesheet">
+		<!-- Portfolio CSS -->
+		<link href="content/prettyPhoto.css" rel="stylesheet">
+		<!-- Slider Revolution CSS -->
+		<link href="content/settings.css" rel="stylesheet">
+		<!--[if IE 8]>
+		<link rel="stylesheet" href="content/settings-ie8.css">
+		<![endif]-->
+		<!-- Font awesome CSS -->
+		<link href="content/font-awesome.min.css" rel="stylesheet">		
+		<!-- Custom CSS -->
+		<link href="content/style.css" rel="stylesheet">
+		<!--[if IE]>
+		<link rel="stylesheet" href="content/ie-style.css">
+		<![endif]-->
+		
+        <link rel="stylesheet" href="lib/durandal/css/durandal.css" />
+        <link rel="stylesheet" href="content/samples.css" />
+		
+        
+        
+		<!-- 3rd party libraries -->
+		<!--<script src="Scripts/jquery-1.8.3.js"></script>-->
+        <script src="lib/jquery/jquery-1.9.1.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.js"></script>
+        <script src="lib/knockout/knockout-2.3.0.js"></script>
+        
+        <script src="Scripts/q.js"></script>
+        <script src="Scripts/breeze.debug.js"></script>
+		<script src="Scripts/breeze.savequeuing.js"></script>
+        
+        <script src="Scripts/jquery.themepunch.revolution.min.js"></script>
+		<script src="Scripts/jquery.themepunch.plugins.min.js"></script>
+        
+		<script type="text/javascript">
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                var mq = "@@-ms-viewport{width:auto!important}";
+                msViewportStyle.appendChild(document.createTextNode(mq));
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="applicationHost">
+            <div class="splash">
+                <div class="message">
+                    Puzzle Cloud
+                </div>
+                <i class="icon-spinner icon-2x icon-spin active"></i>
+            </div>
+        </div>
+
+        <script src="lib/require/require.js" data-main="app/main"></script>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <!-- Footer copy right  -->
+                <div class="copy-rit">
+                    <span> &copy; Copyright 2013 - <a href="#">Puzzle Cloud</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+    </body>
+    
+    
+    <!-- Javascript files -->
+		
+		<!-- Revolution Slider JS -->
+		
+		
+		<!-- Custom JS -->
+		<!--<script src="Scripts/custom.js"></script>-->
+		<!-- Javascript for this page -->
+		<!-- Js for plot -->
+		<script type="text/javascript">
+		    /* plot js */
+
+		    //$(function()
+		    //{
+		    //    var d1 = [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 5], [7, 6], [8, 7], [9, 6], [10, 7], [11, 8], [12, 9], [13, 9], [14, 9], [15, 8], [16, 8], [17, 9], [18, 10], [19, 10], [20, 9], [21, 8], [22, 7], [23, 8], [24, 9], [25, 8], [26, 6], [27, 4], [28, 2]];
+		    //    var options = {
+		    //        series: {
+		    //            lines: {
+		    //                show: true, fill: true, fillColor: "rgba(113,214,232,0.5)", lineWidth: 1
+		    //            },
+		    //            points: {
+		    //                show: true, fill: true, fillColor: "rgba(113,214,232,0.5)"
+		    //            }
+		    //        },
+		    //        colors: ["rgba(255,255,255,1)"],
+		    //        grid: {
+		    //            color: "#fff", borderWidth: 0, minBorderMargin: 5
+		    //        },
+		    //        xaxis: {
+		    //            font: {
+		    //                size: 10,
+		    //                color: "rgba(255,255,255,0.8)"
+		    //            }
+		    //        },
+		    //        yaxis: {
+		    //            font: {
+		    //                size: 10,
+		    //                color: "rgba(255,255,255,0.8)"
+		    //            }
+		    //        }
+		    //    };
+
+		    //    $.plot(".plot-chart", [d1], options);
+		    //});
+
+		</script>
+		
+    
+
+</html>

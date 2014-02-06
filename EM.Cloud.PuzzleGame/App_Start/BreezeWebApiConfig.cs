@@ -2,7 +2,8 @@ using System.Web.Http;
 
 [assembly: WebActivator.PreApplicationStartMethod(
     typeof(EM.Cloud.PuzzleGame.App_Start.BreezeWebApiConfig), "RegisterBreezePreStart")]
-namespace EM.Cloud.PuzzleGame.App_Start {
+namespace EM.Cloud.PuzzleGame.App_Start
+{
   ///<summary>
   /// Inserts the Breeze Web API controller route at the front of all Web API routes
   ///</summary>

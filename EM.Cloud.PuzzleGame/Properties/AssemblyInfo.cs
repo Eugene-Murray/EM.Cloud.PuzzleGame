@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EM.Cloud.PuzzleGame")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Todo-Require")]
+[assembly: AssemblyDescription("Todo/KO version using RequireJS modularity")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard Company")]
-[assembly: AssemblyProduct("EM.Cloud.PuzzleGame")]
-[assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2014")]
+[assembly: AssemblyCompany("IdeaBlade")]
+[assembly: AssemblyProduct("Todo-Require")]
+[assembly: AssemblyCopyright("Copyright IdeaBlade ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("04bf13fe-6da6-4f59-90d0-5b267fcce70e")]
+[assembly: Guid("17342f6f-769b-4706-a5aa-b801073e0b09")]
 
 // Version information for an assembly consists of the following four values:
 //

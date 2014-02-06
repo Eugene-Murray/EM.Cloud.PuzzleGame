@@ -1,4 +1,4 @@
-﻿define(['durandal/app', 'knockout'], function (app, ko) {
+﻿define(['durandal/app', 'ko'], function (app, ko) {
     return {
         received: ko.observableArray([]),
         subscription:ko.observable(),
