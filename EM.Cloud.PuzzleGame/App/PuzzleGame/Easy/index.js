@@ -1,19 +1,12 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function(app, system, ko)
 {
     var title = "Easy";
-    var name = ko.observable();
-    var canSayHello = ko.computed(function () {
-        return name() ? true : false;
-    });
+    
 
     return {
         title: title,
-        displayName: 'What is your name?',
-        name: name,
-        sayHello: function() {
-            app.showMessage('Hello ' + name() + '!', 'Greetings');
-        },
-        canSayHello: canSayHello,
+        
+
         activate: function() {
             system.log('Lifecycle : activate : hello');
         },

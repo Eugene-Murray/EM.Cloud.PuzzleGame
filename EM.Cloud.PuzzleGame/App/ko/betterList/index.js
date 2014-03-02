@@ -1,4 +1,4 @@
-﻿define(['ko'], function (ko) {
+﻿define(['knockout'], function (ko) {
     var itemToAdd = ko.observable("");
     var allItems = ko.observableArray(["Fries", "Eggs Benedict", "Ham", "Cheese"]); // Initial items
     var selectedItems = ko.observableArray(["Ham"]);                                // Initial selection
